@@ -1,0 +1,284 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.single-product{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px;
+  z-index: 1;
+}
+.single-product .container .single-prod{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.single-product .container .single-prod .img-prod{
+  width: 40%;
+  border-radius: 26px;
+  overflow: hidden;
+  img{
+    border-radius: 26px;
+    width: 100%;
+    object-fit: contain;
+    transition: .8s;
+    &:hover{
+      cursor: pointer;
+      transform:scale(0.9);
+    }
+  }
+}
+.single-product .container .single-prod .text-prod{
+  width: 55%;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  gap: 20px;
+  padding: 0px 20px;
+  
+}
+.single-product .container .single-prod .text-prod h1{
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  font-family: sans-serif;
+}
+.single-product .container .single-prod .text-prod .price-rate-prod{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.single-product .container .single-prod .text-prod .price-rate-prod .price-prod{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  span{
+    &:first-child{
+      color: #ff324d;
+      font-size: 24px;
+      font-family: sans-serif;
+      font-weight: 700;
+    }
+    &:last-child{
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.531);
+      text-decoration: line-through;
+    }
+  }
+}
+.single-product .container .single-prod .text-prod .price-rate-prod .rate-prod{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  span{
+    &:first-child{
+      color: orange;
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+    }
+    &:last-child{
+      font-size: 18px;
+      font-family: sans-serif;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.837);
+      
+    }
+  }
+}
+.single-product .container .single-prod .text-prod p{
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.531);
+}
+.single-product .container .single-prod .text-prod .quality {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  span{
+    
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: black;  
+  }
+}
+.single-product .container .single-prod .text-prod .color{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.54);
+  font-family: sans-serif;
+  small{
+    &:nth-child(2){
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: brown;
+      cursor: pointer;
+    }
+    &:nth-child(3){
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: rgb(0, 0, 0);
+      cursor: pointer;
+    }
+    &:nth-child(4){
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: rgb(255, 0, 0);
+      cursor: pointer;
+    }
+  }
+}
+.single-product .container .single-prod .text-prod .size{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  font-family: sans-serif;
+  color:rgba(0, 0, 0, 0.54) ;
+  span{
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    background-color: rgba(232, 229, 229, 0.542);
+    font-size: 15px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.64);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+.single-product .container .single-prod .text-prod .buttons{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.394);
+  border-top: 1px solid rgba(0, 0, 0, 0.394);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.single-product .container .single-prod .text-prod .buttons span:first-child{
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(123, 122, 122, 0.331);
+  cursor: pointer;
+}
+.single-product .container .single-prod .text-prod .buttons span:nth-child(2){
+  width: 50px;
+  height: 30px;
+  font-size: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.431);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(227, 223, 223, 0.331);
+  cursor: pointer;
+}
+.single-product .container .single-prod .text-prod .buttons span:nth-child(3){
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(123, 122, 122, 0.331);
+  cursor: pointer;
+}
+
+.single-product .container .single-prod .text-prod .buttons a{
+  width: 35%;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: 0.7s;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  &::after{
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background-color: #ff324d;
+    width: 105px;
+    height: 50px;
+    transition: .8s;
+    color:white;
+    z-index:-1 ;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 105px;
+    height: 50px;
+    transition: .8s;
+    z-index: -1;
+    background-color: #ff324d;
+
+  }
+  &:hover{
+    border: 1px solid #ff324d;
+    color: #ff324d;      
+    &::after{
+      width: 0px;
+
+    }
+    &::before{
+      width: 0px;
+    }
+  }
+}
+@media (max-width:768px) {
+  .single-product .container .single-prod{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .single-product .container .single-prod .img-prod{
+    width: 70%;
+  }
+  .single-product .container .single-prod .text-prod{
+    width: 70%;
+  }
+}
+@media (max-width:550px){
+  .single-product .container .single-prod .img-prod{
+    width: 100%;
+  }
+  .single-product .container .single-prod .text-prod{
+    width: 100%;
+  }
+}

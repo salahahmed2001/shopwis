@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Fragment, useEffect, useState } from "react";
+import "./App.css";
+import HomeRoutes from "./Routes/HomeRoutes";
+import { Route, Routes } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import ProductsRoutes from "./Routes/ProductsRoutes";
+import SingleProductRoutes from "./Routes/SingleProductRoutes";
+import CartRoutes from "./Routes/CartRoutes";
+import LoaderComp from "./Components/loader/LoaderComp";
 function App() {
+  let [loader, setloader] = useState(true);
+  useEffect(() => {
+    setloader(false);
+  }, []);
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      {loader ? (
+        <LoaderComp />
+      ) : (
+        <Routes>
+          <Route path="/" element={<HomeRoutes />} />
+          <Route path="/products" element={<ProductsRoutes />} />
+          <Route path="/singleproduct/:id" element={<SingleProductRoutes />} />
+          <Route path="/cartRoutes" element={<CartRoutes />} />
+        </Routes>
+      )}
+    </Fragment>
   );
 }
 
