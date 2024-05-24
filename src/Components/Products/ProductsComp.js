@@ -55,7 +55,7 @@ const ProductsComp = () => {
                   <span>${el.price}</span>
                   <span>$95.00</span>
                 </div>
-                <span>
+                <span className="rating">
                   <ImStarFull />
                   <ImStarFull />
                   <ImStarFull />
