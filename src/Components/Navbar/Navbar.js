@@ -4,8 +4,10 @@ import LogoDarck from "../../images/logo_dark.png";
 import "./navbar.css";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoCartOutline, IoSearchOutline } from "react-icons/io5";
-import { FaX } from "react-icons/fa6";
+import { FaHeart, FaUser, FaX } from "react-icons/fa6";
 import { useSelector } from "react-redux";
+import { ImShuffle } from "react-icons/im";
+import { MdPhoneIphone } from "react-icons/md";
 
 const Navbar = () => {
   const CartProducts=useSelector((state)=>state.product.items)
@@ -45,12 +47,12 @@ const Navbar = () => {
         <div className="log">
           <span>English</span>
           <span>USD</span>
-          <span>123-456-789</span>
+          <span><MdPhoneIphone />  123-456-789</span>
         </div>
         <div className="log">
-          <span> Comaare</span>
-          <span>Wishlist</span>
-          <span> Login</span>
+          <span><ImShuffle /> Comaare</span>
+          <span><FaHeart /> Wishlist</span>
+          <span><FaUser /> Login</span>
         </div>
       </div>
 
