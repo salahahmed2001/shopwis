@@ -5,14 +5,19 @@ import "./navbar.css";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoCartOutline, IoSearchOutline } from "react-icons/io5";
 import { FaHeart, FaUser, FaX } from "react-icons/fa6";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { ImShuffle } from "react-icons/im";
 import { MdPhoneIphone } from "react-icons/md";
 
-const Navbar = () => {
+
+
+const Navbar = ({userData,logOut}) => {
   const CartProducts=useSelector((state)=>state.product.items)
+
   const [Show, setShow] = useState();
   const [nav,setnav]=useState();
+  
+ 
   useEffect(() => {
     window.addEventListener("resize", (e) => {
       const windowSize = e.currentTarget.innerWidth;
@@ -52,11 +57,11 @@ const Navbar = () => {
         <div className="log">
           <span><ImShuffle /> Comaare</span>
           <span><FaHeart /> Wishlist</span>
-          <span><FaUser /> Login</span>
+          {userData?<span  className="login" onClick={logOut}>logout</span>:<NavLink className="login" to="/login"><FaUser /> Login</NavLink>}
         </div>
       </div>
 
-      <header style={nav>300?{position:"fixed"}:{}} className="header">
+      <header style={nav>45?{position:"fixed" }:{}} className="header">
         <div className="logo-btn">
           <div className="logo">
             <img src={LogoDarck} alt=""></img>
@@ -98,7 +103,7 @@ const Navbar = () => {
         <div className={addNewClass("navbar", isActive ? "navbarActive" : "")}>
           <ul>
             <li className="home">
-              <NavLink to="/">
+              <NavLink to="/home">
                 HOME <RiArrowDropDownLine style={{ fontSize: "30px" }} />
               </NavLink>
               <div className="home-links">

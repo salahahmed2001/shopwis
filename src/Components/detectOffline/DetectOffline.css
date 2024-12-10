@@ -1,0 +1,16 @@
+
+.offline{
+    width: 180;
+    background-color: black;
+    height: 40px;
+    position: fixed;
+    color:white;
+    font-size: 10px;
+    padding: 2px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

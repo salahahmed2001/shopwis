@@ -14,6 +14,7 @@ import { ProductSlice } from "../../Redux/ProductSlice";
 const ProductsComp = () => {
   const [Product, setProduct] = useState([]);
   const dispatch=useDispatch();
+  
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products`).then((res) => {
       setProduct(res.data);

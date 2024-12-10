@@ -10,11 +10,13 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { ProductSlice } from "../../Redux/ProductSlice";
 
+
 const SingleProductComp = () => {
   const {id}=useParams();
   const [product,setProduct]=useState({})
   const dispatch=useDispatch();
   const [add,setadd]=useState(0)
+  
   const Plus=()=>{
     setadd(add+1)
     

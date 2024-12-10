@@ -8,13 +8,17 @@ import FurnitureRoutes from "./FurnitureRoutes";
 import TrendingRoutes from "./TrendingRoutes";
 import InstaRoutes from "./InstaRoutes";
 import BtnBackComp from "./BtnBackComp";
+import { Offline } from "react-detect-offline";
+import DetectOffline from "../Components/detectOffline/DetectOffline";
 
 
-const HomeRoutes = () => {
+const HomeRoutes = ({userData,logOut}) => {
  
   return (
     <Fragment>
-      <Navbar />
+      
+      <Offline><DetectOffline/></Offline>
+      <Navbar  userData={userData} logOut={logOut}/>
       <HomeComp />
       <AboutComp />
       <ProductsComp />

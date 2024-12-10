@@ -1,5 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./homecomp.css";
+
+
 const HomeComp = () => {
   const [BackImg, setBackImg] = useState(0);
   const BackArr = [
